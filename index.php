@@ -24,7 +24,7 @@ if (isset($_POST['post_submit'])) {
     }
 
     if ($error) {
-        header('Location: /');
+        header('Location: ./');
     }
 }
 ?>
