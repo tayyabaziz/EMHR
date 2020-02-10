@@ -152,11 +152,11 @@ if (isset($_POST['post_submit'])) {
                             </div>
                             <div class="form-control">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="maleGender" name="gender" value="Him" required>
+                                    <input class="form-check-input" type="radio" id="maleGender" name="gender" value="him" required>
                                     <label class="form-check-label" for="maleGender">Male</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="femaleGender" name="gender" value="Her" required>
+                                    <input class="form-check-input" type="radio" id="femaleGender" name="gender" value="her" required>
                                     <label class="form-check-label" for="femaleGender">Female</label>
                                 </div>
                             </div>
@@ -206,7 +206,7 @@ if (isset($_POST['post_submit'])) {
                     <p><?= $_POST['position'] ?? "" ?></p>
                     <p class="font-weight-bold text-dark"><?= $_POST['description'] ?? "" ?></p>
                     <p class="font-weight-bold congrats-text">
-                        Please extend your support and congratulate him/her in the new role.
+                        Please extend your support and congratulate <?= $_POST['gender'] ?? "" ?> in the new role.
                     </p>
 
                 </div>
