@@ -10,7 +10,7 @@ if (isset($_POST['post_submit'])) {
         $fileExtension = strtolower(end($fileNameCmps));
         $allowedfileExtensions = array('jpg', 'gif', 'png');
         if (in_array($fileExtension, $allowedfileExtensions)) {
-            $newFileName = time().'person_image.' . $fileExtension;
+            $newFileName = time() . 'person_image.' . $fileExtension;
             if (move_uploaded_file($fileTmpPath, $newFileName)) {
                 $error = false;
             } else {
@@ -87,11 +87,14 @@ if (isset($_POST['post_submit'])) {
 
         .description {
             font-size: 24px;
-            line-height: 38px;
+            line-height: 36px;
+            height: 550px;
         }
 
         .congrats-text {
             font-size: 28px;
+            position: absolute;
+            bottom: 10px;
         }
 
         .marker {
@@ -198,9 +201,9 @@ if (isset($_POST['post_submit'])) {
                 <h1 class="title text-center py-4"><?= $_POST['position'] ?? "" ?></h1>
             </div>
             <div class="bg-theme-primary theme-content rounded shadow">
-                <div class="inner-body py-5 px-4">
-                    <div class="row">
-                        <div class="mx-2 text-center">
+                <div class="inner-body py-5 px-4 h-100">
+                    <div class="row h-100">
+                        <div class="mx-2 text-center my-auto">
                             <img class="main-img img-fluid" src="<?= $newFileName ?>" />
                         </div>
                         <div class="col text-white mr-4">
@@ -210,7 +213,9 @@ if (isset($_POST['post_submit'])) {
                             </div>
                             <hr class="mb-0 mt-2">
                             <p><?= $_POST['position'] ?? "" ?></p>
-                            <p class="description mt-4 mb-4"><?= $_POST['description'] ?? "" ?></p>
+                            <div class="description text-justify d-table-cell align-middle">
+                                <?= nl2br($_POST['description'] ?? "") ?>
+                            </div>
                             <p class="font-weight-bolder congrats-text">
                                 Please extend your support and congratulate <?= $_POST['gender'] ?? "" ?> in the new role.
                             </p>
