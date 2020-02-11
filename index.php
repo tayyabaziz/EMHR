@@ -86,12 +86,12 @@ if (isset($_POST['post_submit'])) {
         }
 
         .description {
-            font-size: 20px;
-            line-height: 30px;
+            font-size: 24px;
+            line-height: 38px;
         }
 
         .congrats-text {
-            font-size: 24px;
+            font-size: 28px;
         }
 
         .marker {
@@ -206,11 +206,11 @@ if (isset($_POST['post_submit'])) {
                         <div class="col text-white mr-4">
                             <div>
                                 <span class="float-right my-2">Location: <?= $_POST['city'] ?? "" ?></span>
-                                <h3 class="font-weight-bold"><?= $_POST['fullname'] ?? "" ?></h3>
+                                <h2 class="font-weight-bold"><?= $_POST['fullname'] ?? "" ?></h2>
                             </div>
                             <hr class="mb-0 mt-2">
                             <p><?= $_POST['position'] ?? "" ?></p>
-                            <p class="font-weight-bold description mt-4 mb-4"><?= $_POST['description'] ?? "" ?></p>
+                            <p class="description mt-4 mb-4"><?= $_POST['description'] ?? "" ?></p>
                             <p class="font-weight-bolder congrats-text">
                                 Please extend your support and congratulate <?= $_POST['gender'] ?? "" ?> in the new role.
                             </p>
