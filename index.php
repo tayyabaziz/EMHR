@@ -10,7 +10,7 @@ if (isset($_POST['post_submit'])) {
         $fileExtension = strtolower(end($fileNameCmps));
         $allowedfileExtensions = array('jpg', 'gif', 'png');
         if (in_array($fileExtension, $allowedfileExtensions)) {
-            $newFileName = 'person_image.' . $fileExtension;
+            $newFileName = time().'person_image.' . $fileExtension;
             if (move_uploaded_file($fileTmpPath, $newFileName)) {
                 $error = false;
             } else {
