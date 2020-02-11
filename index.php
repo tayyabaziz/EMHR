@@ -109,7 +109,7 @@ if (isset($_POST['post_submit'])) {
     <?php if (!isset($_POST['post_submit'])) { ?>
         <div class="container">
             <div class="row">
-                <div class="col-sm-8 offset-2">
+                <div class="col-sm-8 offset-sm-2">
                     <form autocomplete="off" class="mt-5" action="" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
                             <div class="input-group">
