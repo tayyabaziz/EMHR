@@ -198,7 +198,7 @@ if (isset($_POST['post_submit'])) {
     <?php } else { ?>
         <div class="my-content m-auto">
             <div class="heading">
-                <h1 class="title text-center py-4"><?= $_POST['position'] ?? "" ?></h1>
+                <h1 class="title text-center py-4">Congratulations</h1>
             </div>
             <div class="bg-theme-primary theme-content rounded shadow">
                 <div class="inner-body py-5 px-4 h-100">
@@ -212,7 +212,7 @@ if (isset($_POST['post_submit'])) {
                                 <h2 class="font-weight-bold"><?= $_POST['fullname'] ?? "" ?></h2>
                             </div>
                             <hr class="mb-0 mt-2">
-                            <p><?= $_POST['position'] ?? "" ?></p>
+                            <h3><?= $_POST['position'] ?? "" ?></h3>
                             <div class="description text-justify d-table-cell align-middle">
                                 <?= nl2br($_POST['description'] ?? "") ?>
                             </div>
