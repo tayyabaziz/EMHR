@@ -188,6 +188,16 @@ if (isset($_POST['post_submit'])) {
                             <div class="input-group">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
+                                        Greetings
+                                    </div>
+                                </div>
+                                <input required name="greetings" class="form-control" placeholder="Greetings">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
                                         Image
                                     </div>
                                 </div>
@@ -221,7 +231,7 @@ if (isset($_POST['post_submit'])) {
                                 <?= nl2br($_POST['description'] ?? "") ?>
                             </div>
                             <p class="font-weight-bolder congrats-text">
-                                Please extend your support and congratulate <?= $_POST['gender'] ?? "" ?> in the new role.
+                                <?= nl2br($_POST['greetings'] ?? "") ?>
                             </p>
 
                         </div>
