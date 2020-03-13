@@ -188,6 +188,16 @@ if (isset($_POST['post_submit'])) {
                             <div class="input-group">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
+                                        Top Greetings
+                                    </div>
+                                </div>
+                                <input required name="greetings_heading" class="form-control" placeholder="Top Greetings">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
                                         Greetings
                                     </div>
                                 </div>
@@ -212,7 +222,7 @@ if (isset($_POST['post_submit'])) {
     <?php } else { ?>
         <div class="my-content m-auto">
             <div class="heading">
-                <h1 class="title text-center py-4 text-uppercase">CONGRATULATIONS !</h1>
+                <h1 class="title text-center py-4 text-uppercase"><?= $_POST['greetings_heading'] ?? "" ?></h1>
             </div>
             <div class="bg-theme-primary theme-content rounded shadow">
                 <div class="inner-body py-5 px-4 h-100">
@@ -222,7 +232,7 @@ if (isset($_POST['post_submit'])) {
                         </div>
                         <div class="col text-white mr-4">
                             <div>
-                                <span class="float-right my-2">Location: <?= $_POST['city'] ?? "" ?></span>
+                                <span class="float-right my-2" style="font-size: 20px;">Location: <?= $_POST['city'] ?? "" ?></span>
                                 <h2 class="font-weight-bold"><?= $_POST['fullname'] ?? "" ?></h2>
                             </div>
                             <hr class="mb-0 mt-2">
