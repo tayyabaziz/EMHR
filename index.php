@@ -8,7 +8,7 @@ if (isset($_POST['post_submit'])) {
         $fileType = $_FILES['image']['type'];
         $fileNameCmps = explode(".", $fileName);
         $fileExtension = strtolower(end($fileNameCmps));
-        $allowedfileExtensions = array('jpg', 'gif', 'png');
+        $allowedfileExtensions = array('jpg', 'gif', 'png', 'jpeg');
         if (in_array($fileExtension, $allowedfileExtensions)) {
             $newFileName = time() . 'person_image.' . $fileExtension;
             if (move_uploaded_file($fileTmpPath, $newFileName)) {
